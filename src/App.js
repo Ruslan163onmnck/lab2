@@ -1,16 +1,16 @@
 import React from 'react';
-import Container from './Container';
-import Button from './Button';
-import Navigation from './Navigation';
+import Header from './Header';
+import Footer from './Footer';
+import Menu from './Menu';
+import Content from './Content';
 function App() {
   return (
-        <Container>
-          <Navigation />
-        <p>
-          Hello World!
-        </p>
-        <Button label="кнопка" onClick={() => alert('кнопка работает')} />
-        </Container>
+    <div>
+      <Header />
+      <Menu />
+      <Content />
+      <Footer />
+    </div>    
   );
 }
 
