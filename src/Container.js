@@ -1,7 +1,14 @@
-import React from 'react';
+import * as React from 'react';
+import CssBaseline from '@mui/material/CssBaseline';
+import Container from '@mui/material/Container';
 
-function Container({ children }) {
-  return <div style={{ padding: '20px', border: '1px solid #ccc' }}>{children}</div>;
+export default function SimpleContainer({children}) {
+  return (
+    <React.Fragment>
+      <CssBaseline />
+      <Container style={{height:"250vh"}}>
+        {children}
+      </Container>
+    </React.Fragment>
+  );
 }
-
-export default Container;
