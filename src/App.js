@@ -1,16 +1,17 @@
 import React from 'react';
-import Container from './Container';
-import Button from './Button';
-import Navigation from './Navigation';
+import { ThemeProvider } from './ThemeContext';
+import Main from './Main';
+import store from './redux/store';
+import { Provider } from 'react-redux';
 function App() {
   return (
-        <Container>
-          <Navigation />
-        <p>
-          Hello World!
-        </p>
-        <Button label="кнопка" onClick={() => alert('кнопка работает')} />
-        </Container>
+    <div>
+      <Provider store={store}>
+      <ThemeProvider>
+      <Main />
+      </ThemeProvider>
+      </Provider>
+    </div>    
   );
 }
 
