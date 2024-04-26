@@ -16,6 +16,7 @@ const Menu = () => {
       <Button component={Link} to="/lab2">Лабораторная №2</Button>
       <Button component={Link} to="/lab4">Лабораторная №4</Button>
       <Button component={Link} to="/lab5">Лабораторная №5</Button>
+      <Button component={Link} to="/lab6">Лабораторная №6</Button>
 
       </ButtonGroup>
     </nav>
