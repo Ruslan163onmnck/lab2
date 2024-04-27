@@ -1,8 +1,9 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
-
+import Button from '@mui/material/Button';
 import Paper from '@mui/material/Paper';
+
 
 export default function FixedBottomNavigation() {
   const [value, setValue] = React.useState(0);
@@ -11,8 +12,9 @@ export default function FixedBottomNavigation() {
   return (
     <Box sx={{ pb: 7 }} ref={ref}>
       <CssBaseline />
-      <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
-      <h3>Test text</h3>
+      <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0, display: 'flex', justifyContent: 'center'}} elevation={3}>
+      <Button>обратная связь</Button>
+      <Button>о компании</Button>
       </Paper>
     </Box>
   );

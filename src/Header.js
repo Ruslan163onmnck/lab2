@@ -2,10 +2,11 @@ import React, { useContext } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import ThemeContext from './ThemeContext';
+import { Link } from 'react-router-dom';
 import Switch from '@mui/material/Switch';
-
-
+import ThemeContext from './ThemeContext';
+import Button from '@mui/material/Button';
+import Menu from './Menu2';
 
 const Header = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -14,7 +15,10 @@ const Header = () => {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-          <Switch defaultChecked color="secondary" onClick={toggleTheme}> Изменить тему</Switch>
+          <Menu/>
+          <Button color='secondary'  component={Link} to="/mainPages">Главная</Button>
+          <Button color='secondary' component={Link} to="/abouts">о себе</Button>
+          <Switch defaultChecked={theme === 'dark'} color="secondary" onClick={toggleTheme} />
         </Toolbar>
       </AppBar>
     </Box>
